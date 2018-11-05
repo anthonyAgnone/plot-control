@@ -1,0 +1,75 @@
+.edit-pieces {
+  width: 25vw;
+  height: 40vh;
+  background-color: #fff;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 0;
+  transition: all 0.5s ease;
+  padding: 2% 1.5%;
+  z-index: 500; }
+  .edit-pieces .form-wrap {
+    padding-left: 10%;
+    width: 100%; }
+    .edit-pieces .form-wrap form {
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+      .edit-pieces .form-wrap form select {
+        transition: all 0.3s ease;
+        width: 80%;
+        padding: 10px 5px;
+        margin-bottom: 10px;
+        border-width: 0 0 initial 0; }
+  .edit-pieces .buttons {
+    width: 100%; }
+    .edit-pieces .buttons button {
+      border-radius: 4px;
+      border: none;
+      color: #ffffff;
+      text-align: center;
+      font-size: 14px;
+      padding: 10px 5px;
+      width: 40%;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px; }
+      .edit-pieces .buttons button:hover span {
+        padding-right: 25px; }
+        .edit-pieces .buttons button:hover span:after {
+          opacity: 1;
+          right: 0; }
+      .edit-pieces .buttons button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s; }
+        .edit-pieces .buttons button span:after {
+          content: '\00bb';
+          position: absolute;
+          opacity: 0;
+          top: 0;
+          right: -20px;
+          transition: 0.5s; }
+    .edit-pieces .buttons .edit-button {
+      background-color: #00182b; }
+    .edit-pieces .buttons .delete-button {
+      background-color: red; }
+  .edit-pieces .close-button {
+    background-color: #00182b;
+    border-radius: 4px;
+    border: none;
+    color: #ffffff;
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    text-align: center;
+    font-size: 12px;
+    padding: 5px 5px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 0; }

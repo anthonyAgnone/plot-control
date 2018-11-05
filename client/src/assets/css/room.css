@@ -1,0 +1,29 @@
+.room {
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-color: #000;
+  border-style: solid; }
+  .room:hover {
+    box-shadow: inset 0 0 20px #fff; }
+
+.garden {
+  background-color: green;
+  width: 80%;
+  height: 80%;
+  margin: 10% auto;
+  position: relative;
+  cursor: pointer; }
+  .garden:hover {
+    box-shadow: inset 0 0 10px #fff; }
+
+.gravel {
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer; }
+  .gravel:hover {
+    box-shadow: inset 0 0 10px #fff; }

@@ -1,0 +1,56 @@
+.form-wrapper {
+  width: 25vw;
+  height: 40vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  position: absolute;
+  right: -25vw;
+  bottom: 0;
+  transition: all 0.5s ease;
+  padding: 2% 1.5%;
+  z-index: 500; }
+  .form-wrapper .form-wrap {
+    padding-left: 10%;
+    width: 100%; }
+    .form-wrapper .form-wrap form {
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+      .form-wrapper .form-wrap form select {
+        transition: all 0.3s ease;
+        width: 80%;
+        padding: 10px 5px;
+        margin-bottom: 10px;
+        border-width: 0 0 initial 0; }
+  .form-wrapper button {
+    border-radius: 4px;
+    background-color: #00182b;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 5px;
+    width: 80%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px; }
+    .form-wrapper button:hover span {
+      padding-right: 25px; }
+      .form-wrapper button:hover span:after {
+        opacity: 1;
+        right: 0; }
+    .form-wrapper button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s; }
+      .form-wrapper button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s; }

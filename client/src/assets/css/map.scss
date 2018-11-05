@@ -1,0 +1,27 @@
+.container {
+	background-color: white;
+	position: relative;
+	width: 30vw;
+	height: 30vw;
+	z-index: 3;
+	&:hover > .hover-box {
+		background-color: green;
+	}
+	.hover-box {
+		position: absolute;
+		left: 50%;
+		top: 20%;
+		transform: translate(-50%);
+		background-color: blue;
+		transition: all 0.6s ease;
+		width: 15vw;
+		height: 15vw;
+		z-index: -1;
+	}
+	.image {
+		width: 100%;
+		height: auto;
+		z-index: 50;
+		pointer-events: none;
+	}
+}

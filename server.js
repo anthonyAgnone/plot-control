@@ -13,12 +13,12 @@ app.use('/api/users', require('./routes/users'));
 app.use('/api/subPieces', require('./routes/subPieces'));
 app.use('/api/messages', require('./routes/messages'));
 app.use(passport.initialize());
-app.use(express.state(path.join(__dirname, 'client', 'build')));
+app.use(express.static(path.join(__dirname, 'client', 'build')));
 
 require('./config/passport')(passport);
 
 mongoose.connect(
-	process.env.MONGODB_URI,
+	process.env.MONGODB_URI || 'mongodb://localhost:27017/plot-control',
 	{ useNewUrlParser: true },
 	() => {
 		console.log('Connected to MongoDB');
@@ -61,7 +61,11 @@ function handleClock() {
 	currentTime.totalTicks++;
 }
 
-const server = app.listen(process.env.PORT, () => {
+app.get('*', (req, res) => {
+	res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+});
+
+const server = app.listen(process.env.PORT || 8000, () => {
 	console.log('Connected on port ' + process.env.PORT);
 });
 const io = require('socket.io').listen(server);
@@ -93,8 +97,4 @@ io.on('connection', client => {
 		// 		.catch(err => console.error(err));
 		// });
 	});
-});
-
-app.get('*', (req, res) => {
-	res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
